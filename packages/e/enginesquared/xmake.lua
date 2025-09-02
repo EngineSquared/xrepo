@@ -25,5 +25,5 @@ package("enginesquared")
 
                 core.RunSystems();
             }
-        ]]}, {configs = {languages = "cxx11"}, includes = {"Core.hpp"}}))
+        ]]}, {configs = {languages = "cxx20"}, includes = {"Core.hpp"}}))
     end)
