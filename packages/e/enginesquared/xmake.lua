@@ -1,14 +1,11 @@
-package("pluginobject")
-    set_description("The pluginobject package")
-    add_deps("enginesquaredcore", "utilslog")
+package("enginesquared")
+    set_description("The enginesquaredcore package")
     add_deps("entt")
-    add_deps("glm >=1.0.1")
-    add_deps("tinyobjloader")
     add_deps("spdlog")
     add_deps("fmt")
+    add_deps("glm")
 
-    add_urls("https://github.com/myrepo/foo.git")
-    add_versions("1.0", "<shasum256 or gitcommit>")
+    add_urls("https://github.com/EngineSquared/EngineSquared.git")
 
     on_install(function (package)
         local configs = {}
