@@ -7,6 +7,8 @@ package("enginesquared")
 
     add_urls("https://github.com/EngineSquared/EngineSquared.git")
 
+    add_versions("webgpu", "7cd0ecfb587e87939e1481f508cf8941cc85b2d8")
+
     on_install(function (package)
         local configs = {}
         if package:config("shared") then
