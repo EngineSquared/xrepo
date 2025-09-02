@@ -19,5 +19,11 @@ package("enginesquared")
     end)
 
     on_test(function (package)
-        -- TODO check includes and interfaces
+        assert(package:check_cxxsnippets({test = [[
+            void test(int args, char** argv) {
+                ES::Engine::Core core;
+
+                core.RunSystems();
+            }
+        ]]}, {configs = {languages = "cxx11"}, includes = {"Core.hpp"}}))
     end)
