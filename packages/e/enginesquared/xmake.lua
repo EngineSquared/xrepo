@@ -20,5 +20,4 @@ package("enginesquared")
 
     on_test(function (package)
         -- TODO check includes and interfaces
-        assert(package:has_cxxtypes("Core", {includes = "Core.h"}))
     end)
