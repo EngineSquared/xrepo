@@ -8,7 +8,7 @@ package("enginesquared")
     add_urls("https://github.com/EngineSquared/EngineSquared.git")
 
     add_versions("v0.1.0", "c93dc690c80147a9c208cc5cd921335b61ed53a6")
-    add_versions("webgpu", "8c5363a6c57109e3e549d96e9a5d6d5fbf51ca93")
+    add_versions("webgpu", "2d4691c85b6e163ffb911f20fd8f917c7d442ef2")
 
     on_install(function (package)
         local configs = {}
