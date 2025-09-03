@@ -1,4 +1,5 @@
 package("enginesquared")
+    set_kind("library")
     set_description("The enginesquaredcore package")
     add_deps("entt")
     add_deps("spdlog")
