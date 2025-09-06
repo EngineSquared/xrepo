@@ -16,8 +16,7 @@ package("enginesquared")
 
     add_urls("https://github.com/EngineSquared/EngineSquared.git")
 
-    add_versions("v0.1.0", "f2ce460711d5275db52875a4f5f186d06bd9ba68")
-    add_versions("preview", "f2ce460711d5275db52875a4f5f186d06bd9ba68") --- IGNORE: this version is a version for test ---
+    add_versions("v0.1.0", "dad34ccbc1cb7c88e237127c1142d8c4aa3fd8af")
     add_versions("webgpu", "a9eaf4e83e0077d288ece929556de7258ce76510")
 
     on_install(function (package)
