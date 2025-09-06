@@ -12,6 +12,7 @@ package("enginesquared")
     add_deps("stb")
     add_deps("joltphysics")
     add_deps("miniaudio")
+    add_deps("rmlui >=6.0")
 
     add_urls("https://github.com/EngineSquared/EngineSquared.git")
 
