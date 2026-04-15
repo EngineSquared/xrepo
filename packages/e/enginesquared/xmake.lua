@@ -14,6 +14,9 @@ package("enginesquared")
     add_deps("lodepng 2025.05.06")
     add_deps("wgpu-native ^24.0.0")
     add_deps("glfw3webgpu v1.3.0-alpha")
+    add_deps("joltphysics v5.4.0")
+    add_deps("rmlui 6.2")
+    add_deps("fmt 12.1.0")
 
     add_urls("https://github.com/EngineSquared/EngineSquared.git")
 
