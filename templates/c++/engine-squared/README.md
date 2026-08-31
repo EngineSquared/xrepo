@@ -1,4 +1,4 @@
-# ${TARGET_NAME}
+# Your EngineSquared project
 
 This project is using [Engine Squared](https://github.com/EngineSquared/EngineSquared).
 <!-- Feel free to enhance this documentation -->
