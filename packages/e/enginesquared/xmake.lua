@@ -2,13 +2,9 @@ package("enginesquared")
     set_kind("library")
     set_description("The enginesquaredcore package")
 
-    -- the core-only build skips the plugins, so a consumer that never touches
-    -- graphics, physics, audio or UI does not pay for them,
-    -- @see https://github.com/EngineSquared/EngineSquared/issues/644
     add_configs("core_only", {description = "Build the engine core and the utils only, without the plugins",
                               default = false, type = "boolean"})
 
-    -- what the core and the utils need; the plugins add the rest in on_load
     add_deps("entt v3.15.0")
     add_deps("gtest v1.17.0")
     add_deps("spdlog v1.16.0")
@@ -48,16 +44,13 @@ package("enginesquared")
 
     on_install(function (package)
         local configs = {}
-        local opt = {}
         if package:config("shared") then
             configs.kind = "shared"
         end
         if package:config("core_only") then
-            -- becomes `xmake f --CoreOnly=y`, the option the engine declares in its root xmake.lua
             configs.CoreOnly = "y"
-            opt.targets = {"EngineSquaredCore", "UtilsLog", "UtilsFunctionContainer", "UtilsTools"}
         end
-        import("package.tools.xmake").install(package, configs, opt)
+        import("package.tools.xmake").install(package, configs)
     end)
 
     on_test(function (package)
